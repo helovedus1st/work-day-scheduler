@@ -3,6 +3,13 @@ $(document).ready(function() {
 var currentHr = moment().hours();
 console.log(currentHr)
 
+function dateTime() {
+    now = moment().format('dddd, MMMM Do YYYY, h:mm:ss a');
+    $('#currentDay').text(now);
+    setTimeout(function () {dateTime(); }, 1000);
+}
+dateTime()
+
 
 $("#8 .description").val(localStorage.getItem("8"));
 $("#9 .description").val(localStorage.getItem("9"));
